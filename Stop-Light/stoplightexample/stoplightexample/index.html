@@ -1,0 +1,40 @@
+﻿<html ng-app="cityRoads" ng-controller="MainController">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap-3.3.7.min.css" rel="stylesheet" />
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less" />    
+  </head>
+  
+    <body ng-view>
+    <div class="container">
+        <header>
+            <center><b>Stop Light Example</b></center>
+        </header>
+      
+      <div class="col-md-12">
+        <h2>Current Direction: {{activeTrafficDirection}}</h2>
+            <div class="col-md-12">
+                 <div stop-light-directive direction="north-south"></div>
+               </div>
+            <div class="col-md-12">
+                 <div stop-light-directive direction="east-west"></div>  
+            </div>
+            <div class="col-md-4 btn-group-act">
+                <div stop-light-switch-directive button-info='{ "type" : "toggleStopLights", "name" : "Toggle Stop Light" }'></div>
+                </div>
+            <div class="col-md-4 btn-group-act">
+                <div stop-light-switch-directive button-info='{ "type" : "startIntervalTraffic", "name" : "Start Interval Stop Light" }'></div>
+                </div>
+            <div class="col-md-4 btn-group-act">
+                <div stop-light-switch-directive button-info='{ "type" : "stopIntervalTraffic", "name" : "Stop Interval Light" }'></div>
+                </div>
+           </div>
+        </div>
+            <script src="js/angular-1.5.8.min.js" type="text/javascript"></script>
+            <script src="js/less-2.7.1.min.js" type="text/javascript"></script>
+            <script src="app.js" type="text/javascript"></script>  
+  </body>
+</html>
